@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app version="3.0"
-         xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         metadata-complete="false">
-
-         
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>insert</servlet-name>
+        <servlet-class>hospital.insert</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validate</servlet-name>
+        <servlet-class>hospital.validate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>patient</servlet-name>
+        <servlet-class>hospital.patient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IssueApp</servlet-name>
+        <servlet-class>hospital.IssueApp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>insert</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validate</servlet-name>
+        <url-pattern>/validate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>patient</servlet-name>
+        <url-pattern>/patient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IssueApp</servlet-name>
+        <url-pattern>/IssueApp</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
 </web-app>
-
