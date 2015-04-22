@@ -1,0 +1,2 @@
+# The default environment for this JWS application is production
+DEBUG=true
